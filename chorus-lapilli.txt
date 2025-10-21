@@ -1,0 +1,6 @@
+- To build chorus-lapilli, I first added 2 new state variables: moveCount (track the total number of moves) and selectedPiece (variable to store the index of the piece a player has selected). 
+- Isolate original tic-tac-toe code to moves < 6. After moves >=6, pieces are going to have to be moved. 
+- After moves >= 6, a 2 click process was implmented all in handleClick(). First use selectedPiece to store which one is going to be moved. Make sure selected piece is not NULL and the destination is NULL.
+- A helper function, isAdjacent() was created to ensure moves are valid. Converts 1D array into 2D coordinates and verifies that an adjacent square is free. 
+- If they are adjacent, check the center square condition. If a player has a piece in the center, their move must result in a win or vacate the center square. If the attempted move processed through tempBoard violates this rule, the function will return early.
+- Move the selected pieces and update states accordingly.

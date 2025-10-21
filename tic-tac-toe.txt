@@ -1,0 +1,11 @@
+- React components need to return a single root JSX element. I can use <> and </> to wrap multiple adjacent JSX elements.
+- Use <div> </div> to separate rows of buttons.
+- Board component can pass props to each Square component it renders. It manages the overall state of the game. 
+- When using useState, each square will display a value of "X" when clicked.
+- By editing the Square component to receive the value prop from the Board component, each Square will now receive a value prop. 
+- To make the Square components interactive, the onClick attribute was added to the <button> element, which was passed the onSquareClick function from its props. 
+- The function handleClick() allows me to place 'X's in the upper left square. 
+- () => handleClick(0) means that the function after () will run after the square is clicked.
+- Add a boolean state to add both 'X's and 'O's. 
+- Return early in handleClick() so that X's and O's can only be added to empty squares.
+- A calculateWinner(squares) helper function was created to check for a winning condition after every move by comparing the squares array against a list of all possible winning lines. 
